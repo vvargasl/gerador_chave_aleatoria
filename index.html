@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Gerador de senhas, gerando passwords" />
+    <title>Gerador de chave aleatória</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img class="logo" src="./assets/logo.png" alt="Gerador de senha logo" />
+
+    <main class="container-input">
+      <span> Quantidade de caracteres : <span id="valor"> </span> </span>
+      <input
+        id="slider"
+        class="slider"
+        type="range"
+        min="10"
+        max="40"
+        value="10"
+      />
+
+      <button id="button" class="button-cta" onclick="generatePassword()">
+        Gerar nova chave
+      </button>
+    </main>
+
+    <div
+      id="container-password"
+      onclick="copyPassword()"
+      class="container-password hide"
+    >
+      <span class="title">Chave gerada: </span>
+      <span id="password" class="password"></span>
+      <span class="tooltip">Clique para copiar 🔑</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
